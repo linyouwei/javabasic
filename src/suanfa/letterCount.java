@@ -1,33 +1,25 @@
 package suanfa;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
-public class quChongWay4 {
+public class letterCount {
 	public static void main(String[] args) {
-		//重复的只保留一个
-//		int[] arr1={1,11,11,3,5,3,5,7,8,9};
-//		List<Integer> list = new ArrayList<Integer>();
-//		for(int i=0;i<arr1.length;i++){
-//			if(isChong(i,arr1)){
-//				list.add(arr1[i]);
-//			}	
-//		}
-//		System.out.println(list);
-		int[] arr1={1,11,11,3,5,3,5,7,8,9};
-		//使用数组会多出0
-		int[] arr2 = new int[arr1.length];
+		//统计字母的个数
+		char[] arr1={'A','C','C','D'};
+		Map<Character ,Integer>  map = new HashMap<Character ,Integer>();
 		int j = 0;
 		for(int i=0;i<arr1.length;i++){
-			if(isChong(i,arr1)){
-				arr2[j]= arr1[i];
-				j++;
-			}	
+			if(map.containsKey(arr1[i])){
+				map.put(arr1[i],map.get(arr1[i])+1);
+			}else{
+				map.put(arr1[i],1);
+			}
 		}
-		for(int i=0;i<arr2.length;i++){
-			System.out.println(arr2[i]);
-		}
-		
+		System.out.println(map);
+			
 		
 	}
 	//判断某个值A和比A位置小的数 是否重复
