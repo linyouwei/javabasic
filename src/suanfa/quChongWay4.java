@@ -3,7 +3,7 @@ package suanfa;
 import java.util.ArrayList;
 import java.util.List;
 
-public class quChongWay3 {
+public class quChongWay4 {
 	public static void main(String[] args) {
 		//统计各个数字有多少个
 		int[] arr1={1,11,11,3,5,3,5,7,8,9};
